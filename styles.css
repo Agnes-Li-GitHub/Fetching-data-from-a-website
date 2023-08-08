@@ -1,0 +1,172 @@
+/* header */
+#title {
+    text-align: center;
+    background-image: linear-gradient(rgba(173,252,234,255), rgba(192,229,246,255));
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* date */
+#date {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+#change {
+    margin-left: 1%;
+}
+
+/* toggle switch, 5 parts in total, source https://tools.wingzero.tw/article/sn/198 */
+#toogle{
+    text-align: center;
+    height: 50px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, grey, white, grey);
+}
+
+/* grey area */
+#slider {
+    cursor: pointer; 
+    background-color: grey;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* make the grey thing smaller by limiting the whole size of the switch*/ 
+label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* a small circle at the top left */
+#slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    top: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+/* white circle can toggle */
+input:checked + #slider:before {
+    transform: translate(25px);
+    transition: .5s;
+}
+
+#flight_data{
+    padding: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    #flight_data{
+        display: flex;
+        flex-direction: column;
+    }
+    .info_line_1{
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_line_2{
+        text-align:center;
+    }
+    .info_line_3{
+        flex-direction: column;
+        align-items: center;
+    }
+    div[id^="Status"] {
+        margin-right: auto;
+    } 
+}
+
+.individual_flight{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.individual_flight_early {
+    display: none;
+    border: solid grey;
+    margin-bottom: 0.5rem;
+}
+
+.individual_flight_current{
+    border: solid grey;
+    margin-bottom: 0.5rem;
+}
+
+.individual_flight_later{
+    display: none;
+    border: solid grey;
+    margin-bottom: 0.5rem;
+}
+
+#orange{
+    text-align: center;
+    background-color: orange;
+    width: 150px;
+    height: 20px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+#green{
+    text-align: center;
+    background-color: green;
+    width: 150px;
+    height: 20px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.info_line_1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_line_3{
+    display: flex;
+}
+
+div[id^="Terminal_"] {
+    margin-right: 3%;
+} 
+
+div[id^="Aisle_"] {
+    margin-right: 3%;
+} 
+
+div[id^="Gate_"] {
+    margin-right: 3%;
+} 
+
+div[id^="Status"] {
+    margin-left: auto;
+    text-align: right;
+} 
+
+div[id^="Scheduled_Time"] {
+    text-align: right;
+} 
+
+span{
+    font-weight: bold;
+}
